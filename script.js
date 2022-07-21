@@ -67,7 +67,6 @@ function addCardDiv(book){
                 myLibrary.splice(i, 1);
         container.removeChild(e.target.parentElement);
     });
-
     container.append(card);
 }
 
@@ -78,12 +77,13 @@ function areInputFieldsEmpty(){
     return (title.length === 0 || date.length === 0 || author.length === 0);
 }
 
-
-function Book(id, title, author, date){
-    this.id = id;
-    this.title = title;
-    this.author = author;
-    this.date = date;
+class Book{
+    constructor(id, title, author, date){
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.date = date;
+    };
 }
 
 
